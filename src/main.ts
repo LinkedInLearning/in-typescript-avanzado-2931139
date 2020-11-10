@@ -1,4 +1,4 @@
-import { StringValidator } from './interfaces/Validation';
+import { CustomUser, StringValidator } from './interfaces/Validation';
 import { LettersOnlyValidator } from './validators/LettersOnlyValidator';
 import { ZipCodeValidator } from './validators/ZipCodeValidator';
 
@@ -22,3 +22,5 @@ strings.forEach((s) => {
 });
 
 console.log('Hola mundo');
+
+const user: CustomUser;
