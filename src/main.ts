@@ -21,6 +21,6 @@ strings.forEach((s) => {
   }
 });
 
-console.log('Hola mundo');
+console.log('Hola mundooooo');
 
-const user: CustomUser;
+let user: CustomUser;
