@@ -23,4 +23,6 @@ strings.forEach((s) => {
 
 console.log('Hola mundo');
 
-let user: CustomUser;
+const user: CustomUser = {
+  name: 'Sergio',
+};
