@@ -1,5 +1,5 @@
 /** Calculator with basic operations */
-class Calculator {
+export class Calculator {
   constructor() {
     console.log('Calculator has been loaded...');
   }

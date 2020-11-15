@@ -1,5 +1,5 @@
 /** Interface for a simple Riddle */
-interface Riddle {
+export interface Riddle {
   riddle: string;
   answer: string;
 }
