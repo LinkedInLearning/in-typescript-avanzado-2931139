@@ -1,10 +1,40 @@
+import { complicatedJoke, joke, quote, riddle } from './content';
+import { Fact } from './interfaces/common.types';
 import { Calculator } from './utils/calc';
 
-console.log('Hola Mundo');
+// console.log('Hola Mundo');
 
+/** Generate a fact! Just pass the one that you need as a parameter!
+ * Possible facts:
+ *  * Quote
+ *  * All Quotes
+ *  * Joke
+ *  * Riddle
+ */
+export function makeA(topic: string): Fact {
+  switch (topic.toLowerCase()) {
+    case 'quote':
+      return quote;
+    case 'joke':
+      return joke;
+    case 'hardJoke':
+      return complicatedJoke;
+    case 'riddle':
+      return riddle;
+
+    default:
+      return 'No existe la opción seleccionada';
+  }
+}
+
+const factResult = makeA('joke');
+
+console.log(factResult);
+
+// Calculator section
 const calc = new Calculator();
 const sumResult = calc.sum(1, 2, 3, 4, 5, 6);
 const diffResult = calc.diff(1, 2, 3, 4, 5, 6);
 
-console.log(`+ Total de la suma es ${sumResult}`);
-console.log(`- Total de la resta es ${diffResult}`);
+// console.log(`+ Total de la suma es ${sumResult}`);
+// console.log(`- Total de la resta es ${diffResult}`);
