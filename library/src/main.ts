@@ -1,4 +1,4 @@
-import { complicatedJoke, joke, quote, riddle } from './content';
+import * as fact from './content';
 import { Fact } from './interfaces/common.types';
 import { Calculator } from './utils/calc';
 
@@ -14,20 +14,20 @@ import { Calculator } from './utils/calc';
 export function makeA(topic: string): Fact {
   switch (topic.toLowerCase()) {
     case 'quote':
-      return quote;
+      return fact.quote;
     case 'joke':
-      return joke;
+      return fact.joke;
     case 'hardJoke':
-      return complicatedJoke;
+      return fact.hardJoke;
     case 'riddle':
-      return riddle;
+      return fact.riddle;
 
     default:
       return 'No existe la opción seleccionada';
   }
 }
 
-const factResult = makeA('joke');
+const factResult = makeA('quote');
 
 console.log(factResult);
 

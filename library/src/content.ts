@@ -1,4 +1,4 @@
-import { ComplicatedJoke, Joke } from './interfaces/joke.interface';
+import { ComplicatedJoke as HardJoke, Joke } from './interfaces/joke.interface';
 import { Quote } from './interfaces/quote.interface';
 import { Riddle } from './interfaces/riddle.interface';
 
@@ -14,7 +14,7 @@ export const joke: Joke = {
   category: 'Chiste simple',
 };
 
-export const complicatedJoke: ComplicatedJoke = {
+export const hardJoke: HardJoke = {
   body:
     'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   category: 'Chiste simple',
