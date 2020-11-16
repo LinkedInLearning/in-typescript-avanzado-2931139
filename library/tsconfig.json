@@ -4,6 +4,9 @@
     "module": "commonjs",
     "outDir": "./dist",
     "strict": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@yfx/models": ["interfaces/index.ts"]
+    }
   }
 }
-
