@@ -30,7 +30,7 @@ export function makeA(topic: string): Fact {
   }
 }
 
-const factResult = makeA('all-quotes');
+const factResult = makeA('quote');
 
 console.log(factResult);
 
