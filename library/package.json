@@ -2,12 +2,14 @@
   "name": "yfx-in-modules",
   "version": "0.0.1",
   "description": "Sample library fo LI course",
-  "main": "index.js",
+  "main": "dist/main.js",
+  "types": "dist/types/main.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm run build",
+    "build": "tsc"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sergio Brito - @yacaFx",
   "license": "ISC",
   "devDependencies": {
     "@types/lodash": "^4.14.165",
