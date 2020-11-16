@@ -1,6 +1,7 @@
 import * as fact from './content';
 import { Fact } from './interfaces/common.types';
 import { Calculator } from './utils/calc';
+import getQuote, { getAllQuotes } from './utils/quotes';
 
 // console.log('Hola Mundo');
 
@@ -14,9 +15,9 @@ import { Calculator } from './utils/calc';
 export function makeA(topic: string): Fact {
   switch (topic.toLowerCase()) {
     case 'quote':
-      return fact.quote;
-    case 'all-quote':
-      return fact.quote;
+      return getQuote();
+    case 'all-quotes':
+      return getAllQuotes();
     case 'joke':
       return fact.joke;
     case 'hardJoke':
@@ -29,7 +30,7 @@ export function makeA(topic: string): Fact {
   }
 }
 
-const factResult = makeA('quote');
+const factResult = makeA('all-quotes');
 
 console.log(factResult);
 

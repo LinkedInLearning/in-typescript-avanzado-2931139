@@ -2,7 +2,7 @@ import { Quote } from '../interfaces/quote.interface';
 import { quote } from './../content';
 
 /** Get a random quote from a base JSON file */
-export function getARandomQuote(): Quote {
+export default function getARandomQuote(): Quote {
   return quote;
 }
 
