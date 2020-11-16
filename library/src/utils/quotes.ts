@@ -1,3 +1,4 @@
+import * as content from '../assets/content.json';
 import { Quote } from '../interfaces/quote.interface';
 import { quote } from './../content';
 
@@ -8,6 +9,5 @@ export default function getARandomQuote(): Quote {
 
 /** Get all quotes from a base JSON file */
 export function getAllQuotes(): Quote[] {
-  const allQuotes: Quote[] = [quote, quote, quote, quote, quote];
-  return allQuotes;
+  return content.quotes;
 }
