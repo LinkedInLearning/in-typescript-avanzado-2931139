@@ -1,6 +1,8 @@
-import { ComplicatedJoke as HardJoke, Joke } from './interfaces/joke.interface';
-import { Quote } from './interfaces/quote.interface';
-import { Riddle } from './interfaces/riddle.interface';
+// import { ComplicatedJoke as HardJoke, Joke } from './interfaces/joke.interface';
+// import { Quote } from './interfaces/quote.interface';
+// import { Riddle } from './interfaces/riddle.interface';
+
+import { ComplicatedJoke as HardJoke, Joke, Quote, Riddle } from './interfaces';
 
 export const quote: Quote = {
   quote:
