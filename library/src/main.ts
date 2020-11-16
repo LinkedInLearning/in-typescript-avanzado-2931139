@@ -15,6 +15,8 @@ export function makeA(topic: string): Fact {
   switch (topic.toLowerCase()) {
     case 'quote':
       return fact.quote;
+    case 'all-quote':
+      return fact.quote;
     case 'joke':
       return fact.joke;
     case 'hardJoke':
