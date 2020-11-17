@@ -1,6 +1,6 @@
 {
   "name": "yfx-in-modules",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Sample library fo LI course",
   "main": "dist/main.js",
   "types": "dist/types/main.d.ts",

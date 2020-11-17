@@ -1,7 +1,7 @@
 /** Calculator with basic operations */
 export class Calculator {
   constructor() {
-    console.log('Calculator has been loaded...');
+    // console.log('Calculator has been loaded...');
   }
 
   /** Sum any quantity of values */

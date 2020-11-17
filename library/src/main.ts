@@ -32,7 +32,7 @@ export function makeA(topic: string): Fact {
 
 const factResult = makeA('quote');
 
-console.log(factResult);
+// console.log(factResult);
 
 // Calculator section
 const calc = new Calculator();
