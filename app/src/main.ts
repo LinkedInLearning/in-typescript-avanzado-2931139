@@ -1,6 +1,6 @@
-import { makeA } from 'yfx-in-modules';
 import './init';
+import { picker } from './init';
 
-const resultJoke = makeA('joke');
+const resultJoke = picker('joke');
 
 console.log(resultJoke);
