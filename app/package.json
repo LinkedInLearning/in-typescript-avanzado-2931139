@@ -18,12 +18,14 @@
   },
   "homepage": "https://github.com/LinkedInLearning/in-typescript-avanzado-2931139#readme",
   "devDependencies": {
+    "@types/jquery": "^3.5.4",
     "ts-loader": "^8.0.11",
     "typescript": "^4.0.5",
     "webpack": "^5.4.0",
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
-    "yfx-in-modules": "0.0.3"
+    "jquery": "^3.5.1",
+    "yfx-in-modules": "0.0.4"
   }
 }
