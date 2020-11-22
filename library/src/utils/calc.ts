@@ -1,4 +1,14 @@
+function Logger(message: string) {
+  console.log(`Mensaje: ${message}`);
+
+  return function (target: any) {
+    console.log(`Clase decorada: ${target}`);
+    console.log(target);
+  };
+}
+
 /** Calculator with basic operations */
+@Logger('Hola mundo')
 export class Calculator {
   constructor() {
     // console.log('Calculator has been loaded...');
