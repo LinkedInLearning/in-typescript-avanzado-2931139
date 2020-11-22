@@ -82,7 +82,7 @@ export function prefix(label: string) {
     };
 
     const setter = (next: string) => {
-      console.log('actualizando valor...');
+      //  console.log('actualizando valor...');
       val = ` ${label} ${next}`;
     };
 

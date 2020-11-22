@@ -47,7 +47,7 @@ const calc = new Calculator();
 
 // console.log(`Resultado: ${result}`);
 
-console.log(`Total: ${calc.total}`);
+// console.log(`Total: ${calc.total}`);
 
 // for (let key in calc) {
 //   console.log(`Key: ${key}`);
