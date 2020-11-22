@@ -63,12 +63,34 @@ export function confirm(status: boolean) {
     const original = descriptor.value;
     descriptor.value = function (...args: any[]) {
       if (status) {
-        console.log(this, args);
+        // console.log(this, args);
         const result = original.apply(this, args);
         return result;
       } else {
         return 0;
       }
     };
+  };
+}
+
+export function prefix(label: string) {
+  return function (target: any, key: string) {
+    let val = target[key];
+
+    const getter = () => {
+      return val;
+    };
+
+    const setter = (next: string) => {
+      console.log('actualizando valor...');
+      val = ` ${label} ${next}`;
+    };
+
+    Object.defineProperty(target, key, {
+      get: getter,
+      set: setter,
+      enumerable: true,
+      configurable: true,
+    });
   };
 }

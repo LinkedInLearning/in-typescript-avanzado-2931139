@@ -5,6 +5,7 @@ import {
   frozen,
   init,
   Logger,
+  prefix,
   test,
 } from './../decorators/common';
 
@@ -13,12 +14,13 @@ import {
 @init
 @Logger('Hola mundo')
 export class Calculator {
+  @prefix('→ → →')
   total = 0;
   constructor() {
     // console.log('Calculator has been loaded...');
   }
 
-  @confirm(false)
+  @confirm(true)
   /** Sum any quantity of values */
   sum(...values: number[]): number {
     return values.reduce((previous, current) => {
@@ -41,11 +43,11 @@ export class Calculator {
 
 const calc = new Calculator();
 
-const result = calc.sum(1, 2, 3);
+// const result = calc.sum(1, 2, 3);
 
-console.log(`Resultado: ${result}`);
+// console.log(`Resultado: ${result}`);
 
-// console.log(calc.total);
+console.log(`Total: ${calc.total}`);
 
 // for (let key in calc) {
 //   console.log(`Key: ${key}`);
