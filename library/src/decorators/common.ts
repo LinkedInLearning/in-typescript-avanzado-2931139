@@ -41,7 +41,7 @@ export function test() {
 }
 
 export function init<T extends { new (...args: any[]): {} }>(constructor: T) {
-  console.log(constructor);
+  // console.log(constructor);
   return class extends constructor {
     total = 10;
     description = 'nueva propiedad';
@@ -51,4 +51,24 @@ export function init<T extends { new (...args: any[]): {} }>(constructor: T) {
 export function frozen(constructor: Function) {
   Object.freeze(constructor);
   Object.freeze(constructor.prototype);
+}
+
+export function confirm(status: boolean) {
+  return function (
+    target: Object,
+    key: string | symbol,
+    descriptor: PropertyDescriptor
+  ) {
+    // console.log(descriptor.value);
+    const original = descriptor.value;
+    descriptor.value = function (...args: any[]) {
+      if (status) {
+        console.log(this, args);
+        const result = original.apply(this, args);
+        return result;
+      } else {
+        return 0;
+      }
+    };
+  };
 }

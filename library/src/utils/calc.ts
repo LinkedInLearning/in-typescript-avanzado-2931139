@@ -1,4 +1,5 @@
 import {
+  confirm,
   connect,
   counter,
   frozen,
@@ -17,6 +18,7 @@ export class Calculator {
     // console.log('Calculator has been loaded...');
   }
 
+  @confirm(false)
   /** Sum any quantity of values */
   sum(...values: number[]): number {
     return values.reduce((previous, current) => {
@@ -39,10 +41,14 @@ export class Calculator {
 
 const calc = new Calculator();
 
+const result = calc.sum(1, 2, 3);
+
+console.log(`Resultado: ${result}`);
+
 // console.log(calc.total);
 
 // for (let key in calc) {
 //   console.log(`Key: ${key}`);
 // }
 
-class Scientific extends Calculator {}
+// class Scientific extends Calculator {}
