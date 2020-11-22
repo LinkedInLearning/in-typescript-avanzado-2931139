@@ -1,11 +1,4 @@
-function Logger(message: string) {
-  console.log(`Mensaje: ${message}`);
-
-  return function (target: any) {
-    console.log(`Clase decorada: ${target}`);
-    console.log(target);
-  };
-}
+import { connect, counter, Logger, test } from './../decorators/common';
 
 /** Calculator with basic operations */
 @Logger('Hola mundo')
@@ -21,6 +14,11 @@ export class Calculator {
     });
   }
 
+  // (f ∘ g)(x) es equivalente f(g(x)).
+  // (connect ∘ counter)(diff) es equivalente connect(counter(diff)).
+  @connect()
+  @counter()
+  @test()
   /** Substract any quantity of values */
   diff(...values: number[]): number {
     return values.reduce((previous, current) => {
