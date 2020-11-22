@@ -1,8 +1,18 @@
-import { connect, counter, Logger, test } from './../decorators/common';
+import {
+  connect,
+  counter,
+  frozen,
+  init,
+  Logger,
+  test,
+} from './../decorators/common';
 
 /** Calculator with basic operations */
+@frozen
+@init
 @Logger('Hola mundo')
 export class Calculator {
+  total = 0;
   constructor() {
     // console.log('Calculator has been loaded...');
   }
@@ -26,3 +36,13 @@ export class Calculator {
     });
   }
 }
+
+const calc = new Calculator();
+
+// console.log(calc.total);
+
+// for (let key in calc) {
+//   console.log(`Key: ${key}`);
+// }
+
+class Scientific extends Calculator {}

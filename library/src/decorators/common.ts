@@ -39,3 +39,16 @@ export function test() {
     // console.log('Decorador TEST  --> invocado');
   };
 }
+
+export function init<T extends { new (...args: any[]): {} }>(constructor: T) {
+  console.log(constructor);
+  return class extends constructor {
+    total = 10;
+    description = 'nueva propiedad';
+  };
+}
+
+export function frozen(constructor: Function) {
+  Object.freeze(constructor);
+  Object.freeze(constructor.prototype);
+}
