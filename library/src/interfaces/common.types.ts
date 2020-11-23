@@ -4,4 +4,4 @@ import { Quote } from './quote.interface';
 import { Riddle } from './riddle.interface';
 
 /** Fact types per kind of content */
-export type Fact = Quote | Quote[] | Joke | Riddle | string;
+export type Fact = Quote | Quote[] | Joke<string> | Riddle | string;

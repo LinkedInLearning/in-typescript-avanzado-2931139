@@ -1,8 +1,8 @@
 /** Interface for a simple Joke */
-export interface Joke {
-  body: string;
-  category: string;
-  [key: string]: string;
+export interface Joke<T> {
+  body: T;
+  category: T;
+  [key: string]: T;
 }
 
 // /** Interface for a complicated Joke */
@@ -10,9 +10,17 @@ export interface Joke {
 //   level: number;
 // }
 
-const joke: Joke = {
-  body: 'Esta es una broma',
-  category: 'Broma simple',
-  nombre: 'joker',
-  tile: 'joker',
+const joke: Joke<number> = {
+  body: 2,
+  category: 2,
+  nombre: 2,
+  tile: 2,
 };
+
+function random<T, U>(value: T, description: U): T {
+  const result: T = value;
+  console.log(`Value ${value},  description ${description}`);
+  return result;
+}
+
+const answer = random<boolean, string>(true, 'hola');

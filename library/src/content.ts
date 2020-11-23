@@ -10,13 +10,13 @@ export const quote: Quote = {
   author: '@yacaFx',
 };
 
-export const joke: Joke = {
+export const joke: Joke<string> = {
   body:
     'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   category: 'Chiste simple',
 };
 
-export const hardJoke: Joke = {
+export const hardJoke: Joke<string> = {
   body:
     'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   category: 'Chiste simple',
