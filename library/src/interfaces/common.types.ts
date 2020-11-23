@@ -5,7 +5,14 @@ import { Riddle } from './riddle.interface';
 /** Fact types per kind of content */
 // export type Fact = Quote | Quote[] | Joke<string> | Riddle | string;
 
-export type Fact<T> = T;
+export type Fact<T, U = {}> = T | U;
+
+const mixedFact: Fact<Quote, Riddle> = {
+  author: 'yacafx',
+  quote: 'Happy Coding',
+  riddle: 'Agua pasa por mi casa, cate de mi corazón',
+  answer: 'aguacate',
+};
 
 const quote: Fact<Quote> = {
   author: 'yacafx',
