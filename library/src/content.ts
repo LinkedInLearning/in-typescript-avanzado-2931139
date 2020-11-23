@@ -2,7 +2,7 @@
 // import { Quote } from './interfaces/quote.interface';
 // import { Riddle } from './interfaces/riddle.interface';
 
-import { ComplicatedJoke as HardJoke, Joke, Quote, Riddle } from '@yfx/models';
+import { Joke, Quote, Riddle } from '@yfx/models';
 
 export const quote: Quote = {
   quote:
@@ -16,11 +16,11 @@ export const joke: Joke = {
   category: 'Chiste simple',
 };
 
-export const hardJoke: HardJoke = {
+export const hardJoke: Joke = {
   body:
     'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   category: 'Chiste simple',
-  level: 3,
+  level: '3',
 };
 
 export const riddle: Riddle = {
