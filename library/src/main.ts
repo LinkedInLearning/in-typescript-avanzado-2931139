@@ -1,5 +1,4 @@
 import * as fact from './content';
-import { Fact } from './interfaces/common.types';
 import { Calculator } from './utils/calc';
 import getQuote, { getAllQuotes } from './utils/quotes';
 
@@ -12,7 +11,7 @@ import getQuote, { getAllQuotes } from './utils/quotes';
  *  * Joke
  *  * Riddle
  */
-export function makeA(topic: string): Fact {
+export function makeA(topic: string): unknown {
   switch (topic.toLowerCase()) {
     case 'quote':
       return getQuote();
